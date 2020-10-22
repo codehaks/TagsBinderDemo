@@ -1,0 +1,26 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Upload new Video</h1>
+<hr />
+
+@if (Model.Tags!=null)
+{
+    <p>Last tags...</p>
+    foreach (var item in Model.Tags)
+    {
+        <span class="badge badge-info">@item</span>
+    }
+    <hr />
+}
+
+<form method="post">
+    <input class="form-control mb-2" asp-for="Video.Name" />
+    
+    <input class="form-control mb-2" asp-for="Video.Tags" />
+    
+    <button class="btn btn-primary">Submit</button>
+</form>
