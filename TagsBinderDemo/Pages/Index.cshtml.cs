@@ -25,7 +25,8 @@ namespace TagsBinderDemo.Pages
 
         public void OnPost()
         {
-            Tags = Video.Tags.Split(",");
+            Tags = Video.Tags;//.Split(",");
+            Video = new();
 
         }
     }
